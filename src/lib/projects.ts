@@ -256,3 +256,32 @@ export const FEATURED_PROJECT_SLUGS = [
 export const FEATURED_PROJECTS = FEATURED_PROJECT_SLUGS.map(
   (slug) => PROJECTS.find((p) => p.slug === slug)!
 );
+
+export function getProject(slug: string): CaseStudy | undefined {
+  return PROJECTS.find((p) => p.slug === slug);
+}
+
+export function getAdjacentProjects(
+  slug: string
+): { prev: CaseStudy | null; next: CaseStudy | null } {
+  const i = PROJECTS.findIndex((p) => p.slug === slug);
+  if (i === -1) return { prev: null, next: null };
+  return {
+    prev: i > 0 ? PROJECTS[i - 1] : null,
+    next: i < PROJECTS.length - 1 ? PROJECTS[i + 1] : null,
+  };
+}
+
+/**
+ * Heuristic: a project's media is phone-portrait (9:19) when its primary
+ * source is an on-device screenshot from Orion Fit, MindSaid, or our
+ * uploaded phone video recordings.
+ */
+export function isPortraitProject(p: CaseStudy): boolean {
+  const first = p.gallery?.[0] ?? p.image;
+  return (
+    first.includes("client-onboarding") ||
+    first.includes("mindsaid") ||
+    Boolean(p.video)
+  );
+}

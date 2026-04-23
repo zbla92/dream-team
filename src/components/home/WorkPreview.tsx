@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { FEATURED_PROJECTS } from "@/lib/projects";
 
@@ -40,7 +40,7 @@ export default function WorkPreview() {
 
         <div className="grid md:grid-cols-3 gap-4">
           {FEATURED_PROJECTS.map((p, i) => (
-            <motion.article
+            <motion.div
               key={p.slug}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,49 +50,50 @@ export default function WorkPreview() {
                 delay: i * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group border border-border rounded-xl overflow-hidden bg-surface/40 hover:border-accent/40 hover:bg-surface/70 transition-colors flex flex-col"
             >
-              <div className="relative aspect-[4/3] bg-surface-hi overflow-hidden">
-                <Image
-                  src={p.image}
-                  alt={p.client}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/0 to-transparent" />
-                <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-wider text-accent bg-background/70 border border-accent/30 rounded-full px-2 py-0.5 backdrop-blur-sm">
-                  {p.industry}
-                </span>
-              </div>
-
-              <div className="p-5 flex flex-col flex-1">
-                <h3 className="font-mono text-lg text-fg group-hover:text-accent transition-colors mb-2">
-                  {p.client}
-                </h3>
-                <p className="text-sm text-fg-muted leading-relaxed mb-4 line-clamp-3">
-                  {p.solution}
-                </p>
-
-                <div className="mt-auto pt-4 border-t border-border">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-fg-dim mb-1">
-                    Result
-                  </p>
-                  <p className="text-xs text-fg leading-snug">{p.result}</p>
+              <Link
+                href={`/work/${p.slug}`}
+                className="group block border border-border rounded-xl overflow-hidden bg-surface/40 hover:border-accent/40 hover:bg-surface/70 transition-colors h-full"
+              >
+                <div className="relative aspect-[4/3] bg-surface-hi overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt={p.client}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/0 to-transparent" />
+                  <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-wider text-accent bg-background/70 border border-accent/30 rounded-full px-2 py-0.5 backdrop-blur-sm">
+                    {p.industry}
+                  </span>
                 </div>
 
-                {p.liveUrl && (
-                  <a
-                    href={p.liveUrl}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="mt-4 inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-fg-muted hover:text-accent transition-colors self-start"
-                  >
-                    {p.liveLabel ?? "Live"} <ArrowUpRight size={11} />
-                  </a>
-                )}
-              </div>
-            </motion.article>
+                <div className="p-5 flex flex-col">
+                  <h3 className="font-mono text-lg text-fg group-hover:text-accent transition-colors mb-2">
+                    {p.client}
+                  </h3>
+                  <p className="text-sm text-fg-muted leading-relaxed mb-4 line-clamp-3">
+                    {p.solution}
+                  </p>
+
+                  <div className="pt-4 border-t border-border">
+                    <p className="font-mono text-[10px] uppercase tracking-wider text-fg-dim mb-1">
+                      Result
+                    </p>
+                    <p className="text-xs text-fg leading-snug">{p.result}</p>
+                  </div>
+
+                  <span className="mt-4 inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-accent">
+                    View case study
+                    <ArrowRight
+                      size={11}
+                      className="group-hover:translate-x-0.5 transition-transform"
+                    />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
