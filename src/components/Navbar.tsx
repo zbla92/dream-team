@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
@@ -8,6 +10,7 @@ import TerminalMark from "./TerminalMark";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -15,6 +18,9 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header
@@ -26,19 +32,24 @@ export default function Navbar() {
       ].join(" ")}
     >
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" aria-label="Dream Team home">
           <TerminalMark size="md" />
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
-                className="font-mono text-xs uppercase tracking-wider text-fg-muted hover:text-accent transition-colors"
+                className={[
+                  "font-mono text-xs uppercase tracking-wider transition-colors",
+                  isActive(l.href)
+                    ? "text-accent"
+                    : "text-fg-muted hover:text-accent",
+                ].join(" ")}
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -66,13 +77,18 @@ export default function Navbar() {
           <ul className="px-6 py-4 flex flex-col gap-4">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <a
+                <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="font-mono text-sm uppercase tracking-wider text-fg-muted hover:text-accent transition-colors"
+                  className={[
+                    "font-mono text-sm uppercase tracking-wider transition-colors",
+                    isActive(l.href)
+                      ? "text-accent"
+                      : "text-fg-muted hover:text-accent",
+                  ].join(" ")}
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>

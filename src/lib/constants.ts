@@ -10,9 +10,9 @@ export const cld = (
 export const SITE_CONFIG = {
   name: "Dream Team",
   short: "Dream Team",
-  tagline: "We ship products others plan.",
+  tagline: "Full-Stack Development Team for Scalable Web Products",
   subline:
-    "A senior full-stack team that designs, builds and deploys production web & mobile apps — fast, with AI-native workflows.",
+    "We build data-heavy web platforms using React, Node.js, and AI-assisted development.",
   domain: "dream-team.dev",
   url: "https://dream-team.dev",
   contactEmail: "hello@dream-team.dev",
@@ -20,12 +20,9 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Team", href: "#team" },
-  { label: "Work", href: "#work" },
-  { label: "Stack", href: "#stack" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Work", href: "/work" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const STATS = [
@@ -34,3 +31,7 @@ export const STATS = [
   { value: "8", label: "industries" },
   { value: "3–5", label: "team size" },
 ];
+
+export const BOOK_CALL_MAILTO = `mailto:${SITE_CONFIG.contactEmail}?subject=${encodeURIComponent("Let's schedule a call")}&body=${encodeURIComponent(
+  "Hi — I'd like to book a call about a project.\n\nCompany:\nRough scope:\nTimeline:"
+)}`;

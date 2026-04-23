@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import BackgroundDecor from "@/components/BackgroundDecor";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,57 +20,56 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dream Team — Full-stack engineering that ships",
+  title: {
+    default: "Full-Stack Development Team | React, Node.js, AI Development",
+    template: "%s | Dream Team",
+  },
   description:
-    "A small, senior full-stack team that designs, builds and deploys production web and mobile apps fast — with AI-native workflows.",
+    "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
   keywords: [
-    "full-stack engineering",
-    "React",
-    "Next.js",
-    "Node.js",
-    "TypeScript",
+    "full-stack development team",
+    "react node developers",
+    "dedicated dev team",
+    "ai development team",
+    "next.js development",
+    "react native development",
+    "scalable web applications",
+    "MVP development",
+    "product engineering",
     "AI-assisted development",
-    "product development team",
-    "dedicated engineering team",
-    "React Native",
-    "Expo",
   ],
-  authors: [{ name: "Dream Team" }],
-  creator: "Dream Team",
-  metadataBase: new URL("https://dream-team.dev"),
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  metadataBase: new URL(SITE_CONFIG.url),
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://dream-team.dev",
-    siteName: "Dream Team",
-    title: "Dream Team — Full-stack engineering that ships",
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: "Full-Stack Development Team | React, Node.js, AI Development",
     description:
-      "Senior full-stack engineers building production products with AI-native workflows.",
+      "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
     images: [
       {
         url: "https://res.cloudinary.com/dekljoqsm/image/upload/f_auto,q_auto,w_1200,h_630/dream-team/brand/og-image",
         width: 1200,
         height: 630,
-        alt: "Dream Team",
+        alt: SITE_CONFIG.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dream Team — Full-stack engineering that ships",
+    title: "Full-Stack Development Team | React, Node.js, AI Development",
     description:
-      "Senior full-stack engineers building production products with AI-native workflows.",
+      "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
@@ -81,7 +84,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
-      <body className="bg-background text-fg antialiased">{children}</body>
+      <body className="bg-background text-fg antialiased">
+        <BackgroundDecor />
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

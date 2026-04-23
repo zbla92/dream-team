@@ -1,33 +1,21 @@
-import BackgroundDecor from "@/components/BackgroundDecor";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Team from "@/components/Team";
-import CaseStudies from "@/components/CaseStudies";
-import HeroMarquee from "@/components/HeroMarquee";
-import Stack from "@/components/Stack";
-import Process from "@/components/Process";
-import Engagement from "@/components/Engagement";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Hero from "@/components/home/Hero";
+import WhoWeAre from "@/components/home/WhoWeAre";
+import WhatWeDo from "@/components/home/WhatWeDo";
+import HowWeWork from "@/components/home/HowWeWork";
+import AiAdvantage from "@/components/home/AiAdvantage";
+import WorkPreview from "@/components/home/WorkPreview";
+import CtaSection from "@/components/home/CtaSection";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <BackgroundDecor />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Team />
-        <CaseStudies />
-        <HeroMarquee />
-        <Stack />
-        <Process />
-        <Engagement />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <WhoWeAre />
+      <WhatWeDo />
+      <HowWeWork />
+      <AiAdvantage />
+      <WorkPreview />
+      <CtaSection />
+    </>
   );
 }
