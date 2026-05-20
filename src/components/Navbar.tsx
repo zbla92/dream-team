@@ -22,6 +22,8 @@ export default function Navbar() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  if (pathname.startsWith("/pitch")) return null;
+
   return (
     <header
       className={[
@@ -32,7 +34,7 @@ export default function Navbar() {
       ].join(" ")}
     >
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" aria-label="Dream Team home">
+        <Link href="/" className="flex items-center gap-2" aria-label="NoAgency home">
           <TerminalMark size="md" />
         </Link>
 

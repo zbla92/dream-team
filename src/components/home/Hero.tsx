@@ -6,9 +6,9 @@ import { ArrowRight, Calendar, Check } from "lucide-react";
 import { SITE_CONFIG, BOOK_CALL_MAILTO } from "@/lib/constants";
 
 const BULLETS = [
-  "Dedicated team (not freelancers)",
-  "6–10+ years experience",
-  "Fast, reliable delivery",
+  "Direct comms with the engineers building it",
+  "Senior only — 10+ years each, no juniors swapped in",
+  "Specialists on call by the hour, not a retainer",
 ];
 
 export default function Hero() {
@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-accent mb-6"
         >
-          <span className="caret mr-1">›</span> senior full-stack team · EST{" "}
+          <span className="caret mr-1">›</span> no agency · no swap · EST{" "}
           {SITE_CONFIG.founded}
         </motion.p>
 
@@ -31,12 +31,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-mono text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] tracking-tight text-fg max-w-4xl"
         >
-          Full-Stack Development Team{" "}
-          <span className="text-fg-muted">for </span>
+          The senior engineers{" "}
+          <span className="text-fg-muted">you actually </span>
           <span className="text-fg relative inline-block">
-            Scalable Web Products
+            met.
             <span className="absolute -bottom-1 left-0 right-0 h-px bg-accent/60" />
-          </span>
+          </span>{" "}
+          <span className="text-fg-muted">No swap.</span>
         </motion.h1>
 
         <motion.p
@@ -57,9 +58,9 @@ export default function Hero() {
           {BULLETS.map((b) => (
             <li
               key={b}
-              className="inline-flex items-center gap-2 text-sm text-fg"
+              className="inline-flex items-start gap-2 text-sm text-fg"
             >
-              <Check size={16} className="text-accent shrink-0" />
+              <Check size={16} className="text-accent shrink-0 mt-0.5" />
               {b}
             </li>
           ))}
@@ -76,7 +77,7 @@ export default function Hero() {
             className="group font-mono text-sm uppercase tracking-wider bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all inline-flex items-center justify-center gap-2"
           >
             <Calendar size={16} />
-            Book a call
+            Book a 20-min call
             <ArrowRight
               size={16}
               className="group-hover:translate-x-0.5 transition-transform"
@@ -86,7 +87,7 @@ export default function Hero() {
             href="/work"
             className="group font-mono text-sm uppercase tracking-wider border border-border-hi text-fg px-6 py-3 rounded-full hover:border-accent/50 hover:text-accent transition-all inline-flex items-center justify-center gap-2"
           >
-            View work
+            See what we&apos;ve shipped
             <ArrowRight
               size={16}
               className="group-hover:translate-x-0.5 transition-transform"

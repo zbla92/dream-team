@@ -8,25 +8,27 @@ export default function WhoWeAre() {
         <div className="md:col-span-7">
           <Reveal>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-6">
-              {"// who we are"}
+              {"// who you actually work with"}
             </p>
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-mono text-3xl md:text-4xl leading-tight text-fg mb-6 max-w-2xl">
-              A long-term team, not a freelancer roster.
+              Three senior engineers. The same three, every week.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-fg-muted text-base md:text-lg leading-relaxed mb-4 max-w-2xl">
-              We are a dedicated team of senior engineers who have worked
-              together for years. That continuity is why we can move fast,
-              communicate clearly, and deliver consistently — without the
-              coordination tax of strangers building your product.
+              We&apos;re not an agency, not a body shop, not a roster of
+              freelancers picked at random per project. We&apos;re three senior
+              engineers — 10+ years each — who have shipped together long enough
+              to skip the coordination tax. The names on the proposal are the
+              names committing to your repo.
             </p>
             <p className="text-fg-muted text-base md:text-lg leading-relaxed max-w-2xl">
-              We own the whole delivery, from architecture to deployment, and
-              stay accountable for what we ship. No agency middle layer, no
-              hand-offs, no retainers for slideware.
+              When a project needs DevOps, AI/ML, design, or QA depth we
+              don&apos;t have, we plug in a vetted specialist by the hour — no
+              minimum retainer, no padded headcount. You see the bench. You
+              approve every hour.
             </p>
           </Reveal>
         </div>

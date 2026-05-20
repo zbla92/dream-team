@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Get in touch with our full-stack development team. Email, LinkedIn, or book a call directly.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact | Dream Team",
+    title: "Contact | NoAgency",
     description:
       "Get in touch with our full-stack development team. Email, LinkedIn, or book a call directly.",
     url: `${SITE_CONFIG.url}/contact`,

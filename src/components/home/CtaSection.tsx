@@ -9,12 +9,12 @@ export default function CtaSection() {
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <h2 className="font-mono text-3xl md:text-5xl leading-tight text-fg mb-6">
-            Looking for a reliable dev team? Let&apos;s talk.
+            Tired of getting agency juniors? Let&apos;s talk.
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="text-fg-muted md:text-lg max-w-xl mx-auto mb-10">
-            Reply within a day. Able to start within a week.
+            20 minutes, no deck, no sales person. Reply within a day. Able to start within a week.
           </p>
         </Reveal>
         <Reveal delay={0.15}>
@@ -24,7 +24,7 @@ export default function CtaSection() {
               className="group font-mono text-sm uppercase tracking-wider bg-accent text-background px-6 py-3 rounded-full hover:bg-accent/90 transition-all inline-flex items-center justify-center gap-2 accent-glow"
             >
               <Calendar size={16} />
-              Book a call
+              Book a 20-min call
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-0.5 transition-transform"

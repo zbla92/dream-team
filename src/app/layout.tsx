@@ -21,21 +21,21 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Full-Stack Development Team | React, Node.js, AI Development",
-    template: "%s | Dream Team",
+    default: "NoAgency — Senior engineers for funded startups. No swap.",
+    template: "%s | NoAgency",
   },
   description:
-    "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
+    "Three senior engineers who build it themselves, with specialists on call by the hour. Direct comms with the team, no agency middle layer, no juniors swapped in at week three.",
   keywords: [
-    "full-stack development team",
-    "react node developers",
-    "dedicated dev team",
-    "ai development team",
-    "next.js development",
-    "react native development",
-    "scalable web applications",
+    "senior software engineers",
+    "no agency",
+    "startup engineering team",
+    "series a engineering",
+    "series b engineering",
     "MVP development",
-    "product engineering",
+    "POC development",
+    "dedicated dev team",
+    "react node developers",
     "AI-assisted development",
   ],
   authors: [{ name: SITE_CONFIG.name }],
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: "Full-Stack Development Team | React, Node.js, AI Development",
+    title: "NoAgency — Senior engineers for funded startups. No swap.",
     description:
-      "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
+      "Three senior engineers who build it themselves, with specialists on call by the hour. Direct comms, no middle layer, no bait-and-switch.",
     images: [
       {
         url: "https://res.cloudinary.com/dekljoqsm/image/upload/f_auto,q_auto,w_1200,h_630/dream-team/brand/og-image",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Full-Stack Development Team | React, Node.js, AI Development",
+    title: "NoAgency — Senior engineers for funded startups. No swap.",
     description:
-      "Dedicated team building scalable web applications using React, Node.js, and AI-assisted development.",
+      "Three senior engineers who build it themselves, with specialists on call by the hour. Direct comms, no bait-and-switch.",
   },
   robots: { index: true, follow: true },
   icons: {

@@ -8,14 +8,14 @@ export const cld = (
 ): string => `${CLOUDINARY_BASE}/${transforms}/dream-team/${path}`;
 
 export const SITE_CONFIG = {
-  name: "Dream Team",
-  short: "Dream Team",
-  tagline: "Full-Stack Development Team for Scalable Web Products",
+  name: "NoAgency",
+  short: "NoAgency",
+  tagline: "The senior engineers you actually met. No swap.",
   subline:
-    "We build data-heavy web platforms using React, Node.js, and AI-assisted development.",
-  domain: "dream-team.dev",
-  url: "https://dream-team.dev",
-  contactEmail: "hello@dream-team.dev",
+    "Three senior engineers who build it themselves, plus a bench of specialists on call by the hour. Direct comms, no agency middle layer, no juniors at week three.",
+  domain: "noagency.dev",
+  url: "https://noagency.dev",
+  contactEmail: "hello@noagency.dev",
   founded: 2024,
 };
 
@@ -27,11 +27,11 @@ export const NAV_LINKS = [
 
 export const STATS = [
   { value: "33+", label: "years combined" },
-  { value: "25+", label: "apps shipped" },
-  { value: "8", label: "industries" },
-  { value: "3–5", label: "team size" },
+  { value: "25+", label: "products shipped" },
+  { value: "0", label: "swap rate" },
+  { value: "3+", label: "specialists on call" },
 ];
 
-export const BOOK_CALL_MAILTO = `mailto:${SITE_CONFIG.contactEmail}?subject=${encodeURIComponent("Let's schedule a call")}&body=${encodeURIComponent(
-  "Hi — I'd like to book a call about a project.\n\nCompany:\nRough scope:\nTimeline:"
+export const BOOK_CALL_MAILTO = `mailto:${SITE_CONFIG.contactEmail}?subject=${encodeURIComponent("Booking a 20-minute call")}&body=${encodeURIComponent(
+  "Hi — I'd like a short call about a project.\n\nCompany:\nWhat we're building:\nWhere we're stuck (or what we need):\nTimeline:\n"
 )}`;

@@ -4,18 +4,18 @@ import Reveal from "@/components/Reveal";
 const POINTS = [
   {
     icon: Zap,
-    title: "Faster iteration",
-    body: "Weekly shipping instead of quarterly. AI pair-programming and custom pipelines compress the space between idea and deploy.",
+    title: "Weeks, not quarters",
+    body: "Weekly shipping is the default. AI pair-programming compresses the gap between Linear ticket and merged PR.",
   },
   {
     icon: ShieldCheck,
-    title: "Better code quality",
-    body: "More tests, more reviews, more types — at less marginal cost. AI catches the dumb stuff so humans focus on the hard stuff.",
+    title: "Fewer regressions",
+    body: "More tests, more reviews, more types — at less marginal cost. AI catches the dumb stuff so senior engineers focus on the hard stuff.",
   },
   {
     icon: Wallet,
-    title: "Cost efficiency",
-    body: "Higher output per engineer. Fewer bugs in production. Shorter ramps on legacy code. The ROI shows up in your bill.",
+    title: "ROI on your invoice",
+    body: "Higher output per engineer. Fewer bugs in production. Shorter ramp on the legacy code we inherit. The math shows up in the bill.",
   },
 ];
 
@@ -25,19 +25,19 @@ export default function AiAdvantage() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-6">
-            {"// ai advantage"}
+            {"// ai-native delivery"}
           </p>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="font-mono text-3xl md:text-4xl leading-tight text-fg mb-4 max-w-3xl">
-            AI tools are part of how we build — not a feature we sell.
+            AI is how we build — not a feature we resell.
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
           <p className="text-fg-muted md:text-lg max-w-2xl mb-12 leading-relaxed">
-            We actively use Claude Code, Cursor, and custom internal pipelines
-            to speed up development, reduce bugs, and keep quality high as
-            projects scale.
+            Claude Code, Cursor, and custom pipelines are baked into our daily
+            workflow. We don&apos;t demo AI to you — we ship faster because of
+            it.
           </p>
         </Reveal>
 

@@ -1,37 +1,43 @@
 import {
-  Code2,
-  Server,
-  Database,
   Rocket,
+  Layers,
+  Wrench,
+  Plug,
   Sparkles,
+  Gauge,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const SERVICES = [
   {
-    icon: Code2,
-    title: "Full-stack web development",
-    body: "React, Next.js and TypeScript on the front; Node.js and PostgreSQL behind. Built for scale, not for demos.",
-  },
-  {
-    icon: Server,
-    title: "Backend systems & APIs",
-    body: "REST and GraphQL APIs, auth, event pipelines, background jobs — the parts that have to keep working at 3am.",
-  },
-  {
-    icon: Database,
-    title: "Data-heavy applications",
-    body: "Analytics surfaces, real-time dashboards, multi-tenant SaaS schemas. We default to Postgres and keep the stack boring.",
-  },
-  {
     icon: Rocket,
-    title: "MVP → production systems",
-    body: "From first prototype to a production system your customers actually use. Same team, same repo, no rewrites.",
+    title: "POC in 2–4 weeks",
+    body: "You need to show traction or close a customer before you can hire. We build the working demo — not a prototype slide, a thing your users can press.",
+  },
+  {
+    icon: Layers,
+    title: "MVP to production",
+    body: "From first commit to a product real customers pay for. Same team, same repo, no rewrites between phases.",
+  },
+  {
+    icon: Plug,
+    title: "Augment your eng team",
+    body: "Drop us into your existing repo for 4–12 weeks. We ship the feature you can't hire for fast enough, then hand it back clean.",
+  },
+  {
+    icon: Wrench,
+    title: "Modernize what you outgrew",
+    body: "The Series A codebase that's slowing the Series B. We rewrite incrementally — no big-bang migrations, no production outages.",
+  },
+  {
+    icon: Gauge,
+    title: "Ship the feature that's blocking revenue",
+    body: "One specific thing, scoped, priced, delivered. You don't need a 6-month engagement to unblock the integration your top customer needs.",
   },
   {
     icon: Sparkles,
-    title: "AI-assisted development",
-    body: "Claude Code, Cursor, and custom pipelines embedded in how we work — not a demo feature.",
+    title: "AI-native delivery",
+    body: "Claude Code, Cursor, custom pipelines baked into how we ship. Faster cycles, fewer regressions — the ROI lands on your invoice.",
   },
 ];
 
@@ -46,7 +52,7 @@ export default function WhatWeDo() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="font-mono text-3xl md:text-4xl leading-tight text-fg mb-12 max-w-2xl">
-            Five things we do well — no fluff.
+            Six things funded startups hire us for.
           </h2>
         </Reveal>
 

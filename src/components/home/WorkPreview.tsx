@@ -20,7 +20,7 @@ export default function WorkPreview() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-mono text-3xl md:text-4xl leading-tight text-fg max-w-2xl">
-                Real products we&apos;ve shipped.
+                Real products. Real customers. Same three engineers.
               </h2>
             </Reveal>
           </div>
